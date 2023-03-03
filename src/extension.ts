@@ -28,7 +28,7 @@ vscode.workspace.onDidOpenTextDocument((doc: vscode.TextDocument) => {
     let fn = doc.fileName;
     let ext = fn.substr(fn.lastIndexOf(".") + 1);
 
-    if (ext == "c" || ext == "cpp") {
+    if (ext == "c" || ext == "cc" || ext == "cpp") {
         vscode.commands.executeCommand("workbench.action.moveEditorToFirstGroup");
     } else if (ext == "h" || ext == "hpp") {
         vscode.commands.executeCommand("workbench.action.moveEditorToLastGroup");
